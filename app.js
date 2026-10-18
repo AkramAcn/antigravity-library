@@ -127,10 +127,7 @@ function renderSkillCards() {
         </details>
       </div>
 
-      <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-between">
-        <span class="text-xs text-neutral-400 font-mono">
-          Auto-installs skill
-        </span>
+      <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-end">
         <button 
           onclick="copySkillPrompt('${skill.id}', this)"
           class="px-4 py-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-white text-white dark:text-neutral-900 text-xs font-medium flex items-center gap-1.5 transition-colors shadow-sm"
