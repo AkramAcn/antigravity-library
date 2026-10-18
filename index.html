@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akram's Antigravity Library</title>
+  <meta name="description" content="A curated collection of personal Antigravity skills that auto-install with guided setup.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            neutral: {
+              50: '#fafafa',
+              100: '#f5f5f5',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+              400: '#a3a3a3',
+              500: '#737373',
+              600: '#525252',
+              700: '#404040',
+              800: '#262626',
+              900: '#171717',
+              950: '#0a0a0a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 min-h-screen flex flex-col transition-colors duration-150">
+
+  <!-- Header -->
+  <header class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur sticky top-0 z-20">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div>
+        <h1 class="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+          Akram's Antigravity Library
+        </h1>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button 
+        onclick="toggleTheme()" 
+        class="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+        title="Toggle Light / Dark Mode"
+        aria-label="Toggle theme"
+      >
+        <!-- Sun (for dark mode) -->
+        <svg class="w-4 h-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon (for light mode) -->
+        <svg class="w-4 h-4 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section with Subtle Parallax Depth -->
+  <section id="hero-section" class="relative overflow-hidden border-b border-neutral-200/60 dark:border-neutral-800/60 py-16">
+    <!-- Parallax Layer 1: Ambient Grid Background -->
+    <div id="parallax-grid" class="parallax-grid-bg absolute inset-0 -top-16 -bottom-16 pointer-events-none opacity-60"></div>
+    
+    <!-- Parallax Layer 2: Floating Subtle Architectural Markers -->
+    <div id="parallax-floating" class="parallax-layer absolute inset-0 pointer-events-none">
+      <div class="max-w-4xl mx-auto h-full px-6 relative">
+        <span class="absolute top-4 right-10 text-xs font-mono text-neutral-400/40 select-none">+</span>
+        <span class="absolute bottom-6 left-8 text-xs font-mono text-neutral-400/40 select-none">+</span>
+        <span class="absolute top-10 right-32 text-[10px] font-mono text-neutral-400/40 hidden sm:block select-none">40.8075° N, 73.9626° W</span>
+        <span class="absolute bottom-8 right-16 text-[10px] font-mono text-neutral-400/30 hidden sm:block select-none">sys::ready</span>
+      </div>
+    </div>
+
+    <!-- Parallax Layer 3: Foreground Content -->
+    <div class="relative max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mb-3">
+        Welcome to my prompt library!
+      </h2>
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
+        These are the prompts and skills I use daily with Antigravity to stay organized, automate repetitive tasks, and work more productively. Simply click <span class="font-medium text-neutral-900 dark:text-neutral-200">Copy Prompt</span> and paste it into Antigravity - it will automatically interview you with a few quick questions and configure the skill directly on your machine.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Grid / List -->
+  <main class="max-w-4xl mx-auto px-6 py-10 w-full flex-1">
+    <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <!-- Populated cleanly by app.js -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8 text-center text-xs text-neutral-400">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span>Akram's Antigravity Library</span>
+    </div>
+  </footer>
+
+  <!-- Clean Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2 px-4 py-2.5 rounded-lg bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-xs font-medium shadow-lg">
+    <svg class="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg">Copied!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
